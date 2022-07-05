@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React CDN</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // class Listado extends React.Component {
+      //   render() {
+      //     return (
+
+      //     );
+      //   }
+      // }
+
+      const container = document.querySelector("#root");
+      const root = ReactDOM.createRoot(container);
+
+      const Listado = () => {
+        return (
+          <ol>
+            <li>Creando Functional Components</li>
+            <li>Elemento 2</li>
+            <li>Aprendiendo React</li>
+            <li>Usando JSX</li>
+          </ol>
+        );
+      };
+
+      root.render(
+        <div>
+          <h1>React CDN</h1>
+
+          <Listado />
+        </div>
+      );
+    </script>
+  </body>
+</html>
